@@ -11,6 +11,22 @@
 |
 */
 
+// Authentication routes...
+Route::get('login', 'Auth\AuthController@getLogin');
+Route::post('login', 'Auth\AuthController@postLogin');
+Route::get('logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::post('register', 'Auth\AuthController@postRegister');
+Route::get('register', 'Auth\AuthController@getRegister');
+
+// Default route
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
+});
+
+
+// Default route
+Route::get('/test', function () {
+    return view('master');
 });
