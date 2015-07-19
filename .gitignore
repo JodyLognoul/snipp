@@ -3,3 +3,5 @@
 .env.php
 .env
 node_modules
+vendor/bower_components
+public/css
