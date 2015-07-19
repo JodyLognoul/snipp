@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('errors.list')
+
 <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
 

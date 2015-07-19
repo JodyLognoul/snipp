@@ -27,6 +27,6 @@ Route::get('/', function () {
 
 
 // Default route
-Route::get('/test', function () {
+Route::get('/home', function () {
     return view('master');
 });

@@ -1,9 +1,11 @@
 @extends('master')
 
 @section('content')
+
+@include('errors.list')
+
 <form method="POST" action="/auth/login">
     {!! csrf_field() !!}
-
     <div>
         Email
         <input type="email" name="email" value="{{ old('email') }}">
@@ -22,5 +24,4 @@
         <button type="submit">Login</button>
     </div>
 </form>
-
 @endsection
