@@ -23,8 +23,8 @@
                             <li><a href="{{ url('auth/login') }}"><i class="fa fa-user"></i> Profile</a></li>
                             <li><a href="{{ url('auth/logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
                         @else
-                            <li><a href="{{ url('auth/login') }}">Sign in</a></li>
-                            <li><a href="{{ url('auth/register') }}">Register</a></li>
+                            <li><a href="{{ url('auth/login') }}"><i class="fa fa-sign-in"></i> Sign in</a></li>
+                            <li><a href="{{ url('auth/register') }}"><i class="fa fa-edit"></i> Register</a></li>
 
                         @endif
                     </ul>
