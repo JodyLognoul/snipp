@@ -15,10 +15,10 @@ var elixir = require('laravel-elixir');
  	mix
  	.sass('app.scss')
  	.copy(
- 		'vendor/bower_components/fontawesome/css/font-awesome.min.css',
- 		'resources/vendor/font-awesome.min.css'
+ 		'vendor/bower_components/fontawesome/css/font-awesome.css',
+ 		'resources/vendor/font-awesome.css'
  		)
  	.styles([
- 		'../../vendor/font-awesome.min.css'
+ 		'../../vendor/font-awesome.css'
  		],'public/css/vendor.css')
  });
