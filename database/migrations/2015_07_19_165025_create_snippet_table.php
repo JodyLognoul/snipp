@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateSnippetTable extends Migration
 {
@@ -15,7 +15,7 @@ class CreateSnippetTable extends Migration
         Schema::create('snippets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
-            $table->string('content');
+            $table->text('content');
             $table->boolean('public');
             $table->timestamps();
         });
