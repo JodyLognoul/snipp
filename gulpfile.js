@@ -20,5 +20,5 @@ var elixir = require('laravel-elixir');
  		)
  	.styles([
  		'../../vendor/font-awesome.css'
- 		],'public/css/vendor.css')
+ 		],'public/css/vendor.css');
  });

@@ -9,7 +9,7 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
-*/
+ */
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -20,13 +20,14 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+Route::resource('snippet', 'SnippetController');
+
 // Default route
 Route::get('/', function () {
     return view('master');
 });
 
-
 // Default route
 Route::get('/home', function () {
-    return view('master');
+    return redirect('/snippet');
 });

@@ -6010,10 +6010,20 @@ body {
   height: 100%; }
 
 .content {
-  text-align: center;
-  display: inline-block; }
+  display: inline-block;
+  width: 980px; }
 
 .title {
-  font-size: 96px; }
+  font-size: 48px; }
+
+.snippet-index .search input {
+  margin-top: 15px; }
+
+.snippet-index .search-result {
+  margin-top: 15px; }
+  .snippet-index .search-result .list-group-item-heading {
+    font-weight: bold; }
+  .snippet-index .search-result .list-group-item {
+    text-align: left; }
 
 /*# sourceMappingURL=app.css.map */
