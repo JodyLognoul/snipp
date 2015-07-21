@@ -42,5 +42,6 @@
     </div>
     <script src="/js/vendor.js"></script>
     <script src="/js/all.js"></script>
+    @yield('scripts')
 </body>
 </html>

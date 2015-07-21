@@ -8,20 +8,20 @@
 
 	<h1>{{ $snippet->description }}</h1>
 
-	<p>
-		<code>{{ $snippet->content }}</code>
-	</p>
+	<div class="snippet-content">
+		@include('snippet._content')
+	</div>
 
 	<hr>
 
-	{{-- Link to snippet.destroy --}}
-	@include('controls.snippet._destroy')
-
 	{{-- Link to snippet.index --}}
-	@include('controls.snippet._list')
+	@include('actions.snippet._list')
+
+	{{-- Link to snippet.destroy --}}
+	@include('actions.snippet._destroy')
 
 	{{-- Link to snippet.edit --}}
-	@include('controls.snippet._edit')
+	@include('actions.snippet._edit')
 
 </div>
 

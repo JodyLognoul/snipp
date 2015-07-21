@@ -15,10 +15,6 @@ var elixir = require('laravel-elixir');
  	mix
  	.sass('app.scss')
  	.copy(
- 		'vendor/bower_components/fontawesome/css/font-awesome.css',
- 		'resources/vendor/font-awesome.css'
- 		)
- 	.copy(
  		'vendor/bower_components/fontawesome/fonts',
  		'public/fonts/'
  		)
@@ -26,17 +22,14 @@ var elixir = require('laravel-elixir');
  		'vendor/bower_components/highlightjs/styles',
  		'public/hljs/styles'
  		)
- 	.copy(
- 		'vendor/bower_components/highlightjs/highlight.pack.js',
- 		'resources/vendor/highlightjs.js'
- 		)
  	.scripts([
  		'app.js'
  		])
  	.scripts([
- 		'../../vendor/highlightjs.js'
+ 		'../../../vendor/bower_components/highlightjs/highlight.pack.js',
+ 		'../../../vendor/bower_components/jquery/dist/jquery.min.js'
  		], 'public/js/vendor.js')
  	.styles([
- 		'../../vendor/font-awesome.css',
+ 		'../../../vendor/bower_components/fontawesome/css/font-awesome.css',
  		],'public/css/vendor.css');
  });

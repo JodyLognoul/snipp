@@ -21,9 +21,10 @@
 			<a href="{{ route('snippet.show', $snippet->id) }}" class="list-group-item">
 				<h4 class="list-group-item-heading">{{ $snippet->description }}</h4>
 				<p class="list-group-item-text">
-					@inlcude('snippet._content')
+					@include('snippet._content')
 				</p>
 			</a>
+
 			@endforeach
 		</div>
 

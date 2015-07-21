@@ -10,13 +10,13 @@
 	@include('snippet._form', ['submitBtnText' => 'Update the snippet'])
 
 	{!! Form::close() !!}
+
 	<hr>
+	{{-- Link to snippet.index --}}
+	@include('actions.snippet._list')
 
 	{{-- Link to snippet.destroy --}}
-	@include('controls.snippet._destroy')
-
-	{{-- Link to snippet.index --}}
-	@include('controls.snippet._list')
+	@include('actions.snippet._destroy')
 
 </div>
 

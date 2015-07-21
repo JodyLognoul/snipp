@@ -13,7 +13,7 @@
 	<hr>
 
 	{{-- Link to snippet.index --}}
-	@include('controls.snippet._list')
+	@include('actions.snippet._list')
 
 </div>
 
