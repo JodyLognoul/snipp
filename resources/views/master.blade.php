@@ -6,6 +6,7 @@
     <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/vendor.css">
+    <link rel="stylesheet" href="/hljs/styles/{{ env('HL_STYLE') }}.css">
 </head>
 <body>
     <div class="container">
@@ -39,6 +40,7 @@
             @yield('content')
         </div>
     </div>
-</div>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/all.js"></script>
 </body>
 </html>

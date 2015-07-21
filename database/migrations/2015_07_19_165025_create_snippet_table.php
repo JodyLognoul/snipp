@@ -16,6 +16,7 @@ class CreateSnippetTable extends Migration
             $table->increments('id');
             $table->string('description');
             $table->text('content');
+            $table->string('language');
             $table->boolean('public');
             $table->timestamps();
         });

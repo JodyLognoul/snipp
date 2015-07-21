@@ -11,9 +11,8 @@ class Snippet extends Model
         'content',
     ];
 
-    public function getContentAttribute($value)
+    public function _getContentAttribute($value)
     {
         return $value;
-        // return highlight_string($value);
     }
 }
