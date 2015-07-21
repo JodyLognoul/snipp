@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Snipp</title>
+    <title>{{ App::environment('production')?'': 'LOCAL - ' }} Snipp</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/app.css">
@@ -20,11 +20,14 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @if(Auth::user())
-                            <li><a href="{{ url('auth/login') }}"><i class="fa fa-user"></i> Profile</a></li>
-                            <li><a href="{{ url('auth/logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
+
+                        <li><a href="{{ url('auth/login') }}"><i class="fa fa-user"></i> Profile</a></li>
+                        <li><a href="{{ url('auth/logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
+
                         @else
-                            <li><a href="{{ url('auth/login') }}"><i class="fa fa-sign-in"></i> Sign in</a></li>
-                            <li><a href="{{ url('auth/register') }}"><i class="fa fa-edit"></i> Register</a></li>
+
+                        <li><a href="{{ url('auth/login') }}"><i class="fa fa-sign-in"></i> Sign in</a></li>
+                        <li><a href="{{ url('auth/register') }}"><i class="fa fa-edit"></i> Register</a></li>
 
                         @endif
                     </ul>
@@ -39,4 +42,3 @@
 </div>
 </body>
 </html>
-

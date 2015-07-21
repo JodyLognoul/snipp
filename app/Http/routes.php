@@ -24,7 +24,7 @@ Route::resource('snippet', 'SnippetController');
 
 // Default route
 Route::get('/', function () {
-    return view('master');
+    return redirect('/snippet');
 });
 
 // Default route
