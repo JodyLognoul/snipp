@@ -6026,4 +6026,7 @@ body {
   .snippet-index .search-result .list-group-item {
     text-align: left; }
 
+.snippet-show p {
+  text-align: left; }
+
 /*# sourceMappingURL=app.css.map */

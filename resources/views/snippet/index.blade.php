@@ -2,7 +2,8 @@
 
 @section('content')
 
-@include('errors.list')
+@include('errors._list')
+@include('snippet._message')
 
 <div class="snippet-index">
 	@if (Auth::check())
@@ -17,7 +18,7 @@
 		<div class="list-group">
 			@foreach ($snippets as $snippet)
 
-			<a href="#" class="list-group-item">
+			<a href="{{ route('snippet.show', $snippet->id) }}" class="list-group-item">
 				<h4 class="list-group-item-heading">{{ $snippet->description }}</h4>
 				<p class="list-group-item-text"><code>{{ $snippet->content }}</code></p>
 			</a>

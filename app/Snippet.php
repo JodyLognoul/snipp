@@ -13,6 +13,7 @@ class Snippet extends Model
 
     public function getContentAttribute($value)
     {
-        return highlight_string($value);
+        return $value;
+        // return highlight_string($value);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SnippetRequest;
 use App\Snippet;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,6 @@ class SnippetController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth.basic', ['only' => ['create', 'store', 'update', 'edit']]);
         $this->middleware('auth.basic', ['except' => ['show', 'index']]);
     }
 
@@ -38,10 +38,10 @@ class SnippetController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param  SnippetRequest  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(SnippetRequest $request)
     {
         Snippet::create($request->all());
 
@@ -56,7 +56,8 @@ class SnippetController extends Controller
      */
     public function show($id)
     {
-        //
+        $snippet = Snippet::findOrFail($id);
+        return view('snippet.show', compact('snippet'));
     }
 
     /**
@@ -67,19 +68,22 @@ class SnippetController extends Controller
      */
     public function edit($id)
     {
-        //
+        $snippet = Snippet::findOrFail($id);
+        return view('snippet.edit', compact('snippet'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
+     * @param  SnippetRequest  $request
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(SnippetRequest $request, $id)
     {
-        //
+        $snippet = Snippet::findOrFail($id);
+        $snippet->update($request->all());
+        return redirect()->route('snippet.show', $id)->with('message', 'Snippet well updated.');
     }
 
     /**
@@ -90,6 +94,8 @@ class SnippetController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $snippet = Snippet::findOrFail($id);
+        $snippet->delete();
+        return redirect()->route('snippet.index')->with('message', 'Snippet well deleted.');
     }
 }
