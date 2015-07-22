@@ -13,6 +13,7 @@ var elixir = require('laravel-elixir');
 
  elixir(function(mix) {
  	mix
+ 	.phpUnit()
  	.sass('app.scss')
  	.copy(
  		'vendor/bower_components/fontawesome/fonts',
