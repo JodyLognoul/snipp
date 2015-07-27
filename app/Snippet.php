@@ -8,6 +8,7 @@ class Snippet extends Model
 {
     protected $fillable = [
         'description',
+        'namespace',
         'content',
         'public',
         'language',

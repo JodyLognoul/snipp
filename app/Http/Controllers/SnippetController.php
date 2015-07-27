@@ -11,7 +11,7 @@ class SnippetController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth.basic', ['except' => ['show', 'index']]);
+        $this->middleware('auth', ['except' => ['show', 'index']]);
     }
 
     /**
@@ -21,7 +21,7 @@ class SnippetController extends Controller
      */
     public function index()
     {
-        $snippets = Snippet::all();
+        $snippets = Snippet::all()->sortByDesc('created_at');
         return view('snippet.index', compact('snippets'));
     }
 

@@ -13,6 +13,7 @@ class CreateSnippetTable extends Migration
     public function up()
     {
         Schema::create('snippets', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('description');
             $table->text('content');

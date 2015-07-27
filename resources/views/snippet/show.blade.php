@@ -7,6 +7,7 @@
 <div class="snippet-show">
 
 	<h1>{{ $snippet->description }}</h1>
+	<h2><span class="label label-warning">{{ $snippet->namespace }}</span></h2>
 
 	<div class="snippet-content">
 		@include('snippet._content')

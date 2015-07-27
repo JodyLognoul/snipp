@@ -10,9 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
  */
+Route::get('auth/login', [
+    'as' => 'auth.login', 'uses' => 'Auth\AuthController@getLogin',
+]);
 
 // Authentication routes...
-Route::get('auth/login', 'Auth\AuthController@getLogin');
+
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 

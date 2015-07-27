@@ -18,8 +18,12 @@
 		<div class="list-group">
 			@foreach ($snippets as $snippet)
 
-			<a href="{{ route('snippet.show', $snippet->id) }}" class="list-group-item">
-				<h4 class="list-group-item-heading">{{ $snippet->description }}</h4>
+			<a href="{{ route('snippet.show', $snippet->id) }}" id="snippet-{{ $snippet->id }}" class="list-group-item">
+				<h4 class="list-group-item-heading">
+					{{ $snippet->description }}
+					<span class="label label-warning pull-right">{{ $snippet->namespace }}</span>
+				</h4>
+
 				<p class="list-group-item-text">
 					@include('snippet._content')
 				</p>
