@@ -23,6 +23,10 @@
 
 		.list-group-item-heading {
 			font-weight: bold;
+
+			.label {
+				margin-left: 10px;
+			}
 		}
 		.list-group-item {
 			text-align: left;
@@ -33,5 +37,9 @@
 .snippet-show {
 	.snippet-content {
 		text-align: left;
+	}
+	h2 {
+		font-size: 24px;
+		margin-bottom: 20px;
 	}
 }

@@ -37,6 +37,7 @@ class snippetCreateTest extends TestCase
              ->see('value="Create the snippet"')
              ->see('Description:')
              ->see('Namespace:')
+             ->see('Tags:')
              ->see('Language:')
              ->see('Public or private:')
              ->see('Content:')
@@ -50,11 +51,13 @@ class snippetCreateTest extends TestCase
      * @dataProvider createDataFail
      * @return void
      */
-    public function testSubmitWithErrorFails($description, $language, $public, $content, $expected)
+    public function testSubmitWithErrorFails($description, $namespace, $tags, $language, $public, $content, $expected)
     {
         $this->actingAs($this->getUser())
              ->visit(route('snippet.create'))
              ->type($description, 'description')
+             ->type($namespace, 'namespace')
+             ->type($tags, 'tags')
              ->type($language, 'language')
              ->type($public, 'public')
              ->type($content, 'content')
@@ -65,15 +68,40 @@ class snippetCreateTest extends TestCase
     }
 
     /**
+     * Test the login page
+     *
+     * @return void
+     */
+    public function testSubmitSuccess()
+    {
+        $this->actingAs($this->getUser())
+             ->visit(route('snippet.create'))
+             ->type('descriptionTest', 'description')
+             ->type('namespaceTest', 'namespace')
+             ->type('tagsTest', 'tags')
+             ->type('markdown', 'language')
+             ->type(true, 'public')
+             ->type('contentTest', 'content')
+             ->press('Create the snippet')
+             ->see('Snippet well created.')
+             ->seePageIs(route('snippet.index'))
+        ;
+    }
+
+    /**
      * Create data Dataprovider
+     *
+     * $description, $namespace, $tags, $language, $public, $content, $expected
      *
      * @return void
      */
     public function createDataFail()
     {
         return array(
-            array('Description', 'markdown', true, '', 'The content field is required.'),
-            array('', 'markdown', true, 'Content', 'The description field is required.'),
+            array('Description', 'namespaceTest', 'tagsTest', 'markdown', true, '', 'The content field is required.'),
+            array('Description', 'namespaceTest', '', 'markdown', true, 'contentTest', 'The tags field is required.'),
+            array('Description', '', 'tagsTest', 'markdown', true, 'contentTest', 'The namespace field is required.'),
+            array('', 'namespaceTest', 'tagsTest', 'markdown', true, 'Content', 'The description field is required.'),
         );
     }
 

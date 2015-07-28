@@ -45,7 +45,7 @@ class SnippetController extends Controller
     {
         Snippet::create($request->all());
 
-        return redirect('snippet');
+        return redirect()->route('snippet.index')->with('message', 'Snippet well created.');
     }
 
     /**

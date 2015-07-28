@@ -28,22 +28,26 @@ class SnippetRequest extends Request
 
         switch ($this->method()) {
 
-        case 'POST':
-            {
-                return [
-                    'description' => 'required|unique:snippets,description',
-                    'content' => 'required',
-                ];
-            }
-        case 'PUT':
-        case 'PATCH':
-            {
-                return [
-                    'description' => 'required|unique:snippets,description,' . $snippet->id,
-                    'content' => 'required',
-                ];
-            }
-        default:break;
+            case 'POST':
+                {
+                    return [
+                        'description' => 'required|unique:snippets,description',
+                        'content' => 'required',
+                        'namespace' => 'required',
+                        'tags' => 'required',
+                    ];
+                }
+            case 'PUT':
+            case 'PATCH':
+                {
+                    return [
+                        'description' => 'required|unique:snippets,description,' . $snippet->id,
+                        'content' => 'required',
+                        'namespace' => 'required',
+                        'tags' => 'required',
+                    ];
+                }
+            default:break;
         }
     }
 }

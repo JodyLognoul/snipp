@@ -22,6 +22,7 @@
 				<h4 class="list-group-item-heading">
 					{{ $snippet->description }}
 					<span class="label label-warning pull-right">{{ $snippet->namespace }}</span>
+					<span class="label label-success pull-right">{{ $snippet->tags }}</span>
 				</h4>
 
 				<p class="list-group-item-text">

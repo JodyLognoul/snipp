@@ -6034,10 +6034,16 @@ body {
   margin-top: 15px; }
   .snippet-index .search-result .list-group-item-heading {
     font-weight: bold; }
+    .snippet-index .search-result .list-group-item-heading .label {
+      margin-left: 10px; }
   .snippet-index .search-result .list-group-item {
     text-align: left; }
 
 .snippet-show .snippet-content {
   text-align: left; }
+
+.snippet-show h2 {
+  font-size: 24px;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=app.css.map */

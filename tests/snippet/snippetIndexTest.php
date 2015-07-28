@@ -44,6 +44,7 @@ class snippetIndexTest extends TestCase
         $snippet = new Snippet;
         $snippet->description = "MyDescriptionTest";
         $snippet->namespace = "testNamespace";
+        $snippet->tags = "sublime-text";
         $snippet->content = "MyContentTest{console.log(1337);}";
         $snippet->save();
 
@@ -51,6 +52,7 @@ class snippetIndexTest extends TestCase
              ->see($snippet->description)
              ->see($snippet->content)
              ->see($snippet->namespace)
+             ->see($snippet->tags)
              ->see($this->getHtmlId($snippet->id))
         ;
     }
@@ -65,11 +67,11 @@ class snippetIndexTest extends TestCase
         factory('App\Snippet', 10)->create()->each(function ($snippet) {
             $snippet->save();
         });
+
         for ($id = 1; $id <= 10; $id++) {
             $this->visit(route('snippet.index'))
                  ->see($this->getHtmlId($id));
         }
-
     }
 
     /**
