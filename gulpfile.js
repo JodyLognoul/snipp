@@ -24,12 +24,19 @@ var elixir = require('laravel-elixir');
  		'public/hljs/styles'
  		)
  	.scripts([
- 		'app.js'
- 		])
- 	.scripts([
  		'../../../vendor/bower_components/highlightjs/highlight.pack.js',
- 		'../../../vendor/bower_components/jquery/dist/jquery.min.js'
+ 		'../../../vendor/bower_components/jquery/dist/jquery.min.js',
+ 		'../../../vendor/bower_components/vue/dist/vue.js',
+ 		'../../../vendor/bower_components/typeahead.js/dist/typeahead.jquery.js',
+ 		'../../../vendor/bower_components/algoliasearch/dist/algoliasearch.js',
  		], 'public/js/vendor.js')
+ 	.scripts([
+ 		'config.js'
+ 		], 'public/js/config.js')
+ 	.scripts([
+ 		'app.js',
+ 		'snippetSearch.js'
+ 		])
  	.styles([
  		'../../../vendor/bower_components/fontawesome/css/font-awesome.css',
  		],'public/css/vendor.css');

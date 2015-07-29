@@ -3,7 +3,8 @@
 <head>
     <title>{{ App::environment('production')?'': 'LOCAL - ' }} Snipp</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/hljs/styles/{{ env('HL_STYLE') }}.css">
@@ -41,6 +42,7 @@
         </div>
     </div>
     <script src="/js/vendor.js"></script>
+    <script src="/js/config.js"></script>
     <script src="/js/all.js"></script>
     @yield('scripts')
 </body>

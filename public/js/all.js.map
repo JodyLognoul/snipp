@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.js"],"names":[],"mappings":"AAAA","file":"all.js","sourcesContent":["hljs.initHighlightingOnLoad();"],"sourceRoot":"/source/"}
+{"version":3,"sources":["app.js","snippetSearch.js"],"names":[],"mappings":"AAAA;ACAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"all.js","sourcesContent":["hljs.initHighlightingOnLoad();","var vm = new Vue({\n\t\n\tel: \"body\",\n\n\tdata: {\n\t\tsnippets: [\n\t\t\t{\n\t\t\t\tdescription: 'MyDescription',\n\t\t\t\tcontent: 'My content'\n\t\t\t}\n\t\t]\n\t}\n\n})"],"sourceRoot":"/source/"}

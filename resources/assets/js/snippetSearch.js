@@ -1,4 +1,3 @@
-hljs.initHighlightingOnLoad();
 var vm = new Vue({
 	
 	el: "body",
@@ -10,7 +9,13 @@ var vm = new Vue({
 				content: 'My content'
 			}
 		]
+	},
+
+	methods: {
+		addSnippet: function(e) {
+			
+		}
 	}
 
-})
-//# sourceMappingURL=all.js.map
+
+});

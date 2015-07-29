@@ -6000,7 +6000,9 @@ body {
   width: 100%;
   display: table;
   font-weight: 100;
-  font-family: 'Lato'; }
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  color: #34495e; }
 
 .container {
   text-align: center;

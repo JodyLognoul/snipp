@@ -7,7 +7,7 @@
 
 <div class="snippet-index">
 	@if (Auth::check())
-		<a class="btn btn-default" href="{{ route('snippet.create') }}" role="button">New Snippet</a>
+	<a class="btn btn-default" href="{{ route('snippet.create') }}" role="button">New Snippet</a>
 	@endif
 
 	<div class="search">

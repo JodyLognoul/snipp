@@ -22,9 +22,11 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Snippet::class, function (Faker\Generator $faker) {
     return [
-        'description' => $faker->slug,
-        'content' => $faker->text,
+        'description' => $faker->name,
+        'content' => $faker->paragraph(3),
         'language' => 'markdown',
+        'namespace' => 'snipp',
+        'tags' => 'lorem',
         'public' => $faker->boolean(),
     ];
 });

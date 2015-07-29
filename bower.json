@@ -17,6 +17,8 @@
     "fontawesome": "~4.3.0",
     "highlightjs": "~8.6.0",
     "jquery": "~2.1.4",
-    "vue": "~0.12.8"
+    "vue": "~0.12.8",
+    "algoliasearch": "3",
+    "typeahead.js": "~0.11.1"
   }
 }
