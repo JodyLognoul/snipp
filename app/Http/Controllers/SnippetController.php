@@ -32,6 +32,7 @@ class SnippetController extends Controller
      */
     public function create()
     {
+        flash()->success('Welcome!', 'Body of the welcome message!');
         return view('snippet.create');
     }
 

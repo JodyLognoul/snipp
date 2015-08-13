@@ -1,27 +1,88 @@
-## Laravel PHP Framework
+# Snipp
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## VueJs
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+* v-show
+```html
+    <span v-show="isShow"></span>`
+```
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+* v-if
+```html
+    <span v-if="! newSnippet.description">*</span>
+```
+* v-repeat
 
-## Official Documentation
+* v-class
+```html
+    <span v-class="
+      red    : hasError,
+      bold   : isImportant,
+      hidden : isHidden
+    "></span>`
+```
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+* v-on
+```html
+    <button v-on="click: toggleLike"></button>`
+```
 
-## Contributing
+* Custom Filter
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+```js
+Vue.filter('my-filter', function (value) {
+    //content 
+});
 
-## Security Vulnerabilities
+// or
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+var vm = new Vue({
+    
+    el: "#demo",
+    filters: {
+        reverse: function(value){
+            
+        }
+    }
 
-### License
+})
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+* Computed
+
+```js
+var vm = new Vue({
+    
+    el: "#demo",
+    
+    data: {},
+    computed: {
+        fullName: {
+            // the getter should return the desired value
+            get: function () {
+                return this.firstName + ' ' + this.lastName
+            },
+            // the setter is optional
+            set: function (newValue) {
+                var names = newValue.split(' ')
+                this.firstName = names[0]
+                this.lastName = names[names.length - 1]
+            }
+        }
+    }
+    //When you only need the getter, you can provide a single function instead of an object:
+    computed: {
+        fullName: function () {
+            return this.firstName + ' ' + this.lastName 
+        }    
+    }
+})
+```
+
+
+## Others
+
+### Theme Jeffrey Way
+
+Theme: Seti
+ColorScheme: Facebook

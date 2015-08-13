@@ -29,6 +29,7 @@ var elixir = require('laravel-elixir');
  		'../../../vendor/bower_components/vue/dist/vue.js',
  		'../../../vendor/bower_components/typeahead.js/dist/typeahead.jquery.js',
  		'../../../vendor/bower_components/algoliasearch/dist/algoliasearch.js',
+ 		'../../../vendor/bower_components/sweetalert/dist/sweetalert-dev.js',
  		], 'public/js/vendor.js')
  	.scripts([
  		'config.js'
@@ -39,5 +40,6 @@ var elixir = require('laravel-elixir');
  		])
  	.styles([
  		'../../../vendor/bower_components/fontawesome/css/font-awesome.css',
+ 		'../../../vendor/bower_components/sweetalert/dist/sweetalert.css',
  		],'public/css/vendor.css');
  });
