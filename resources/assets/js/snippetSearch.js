@@ -12,7 +12,8 @@ var vm = new Vue({
 		this.$input = $('.input-search-snippet');
 		this.$input.typeahead({
 			minLength: 1,
-            highlight: true
+            highlight: true,
+            hint: false
 		}, {
 			source: this.index.ttAdapter(),
 			displayKey: 'description',
@@ -20,8 +21,8 @@ var vm = new Vue({
 				suggestion: function(hit){
 					return (
 						'<div class="tt-result">' +
-							'<h3 class="description">' + hit.description + '</h3>' +
-							'<h4 class="content">' + hit.content + '</h4>' +
+							'<h3 class="description">' + hit._highlightResult.description.value + '</h3>' +
+							'<h4 class="content">' + hit._highlightResult.content.value + '</h4>' +
 						'</div>');
 				},
 				empty: function(){
@@ -31,10 +32,14 @@ var vm = new Vue({
 					return '<div class="tt-results-pending"><p><i class="fa fa-spinner fa-spin"></i> Loading...</p></div>';	
 				}		
 			}
-		});
+		}).on('typeahead:select', function(e, suggestion){
+			this.query = suggestion.description;
+		}.bind(this));
+
 	},
 	methods: {
 		search: function(){
+			this.$log('query')
 			this.index.search(this.query, function(error, results){
 				this.snippets = results.hits;
 				this.$input.typeahead('close');

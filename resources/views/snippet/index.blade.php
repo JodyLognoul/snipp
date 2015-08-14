@@ -17,18 +17,18 @@
 			   class="input-search-snippet form-control">
 	</div>
 	<div class="search-result">
-		<div class="list-group" v-repeat="snippets">
+		<div class="list-group" v-repeat="snippet: snippets">
 
-			<a href="/snippet/@{{ id }}" id="snippet-@{{ id }}" class="list-group-item">
+			<a href="/snippet/@{{ snippet.id }}" id="snippet-@{{ snippet.id }}" class="list-group-item">
 				<h4 class="list-group-item-heading">
-					@{{ description }}
-					<span class="label label-warning pull-right">@{{ namespace }}</span>
-					<span class="label label-success pull-right">@{{ tags }}</span>
+					@{{ snippet.description }}
+					<span class="label label-warning pull-right">@{{ snippet.namespace }}</span>
+					<span class="label label-success pull-right">@{{ snippet.tags }}</span>
 				</h4>
 
 				<p class="list-group-item-text">
 					<pre>
-						<code class="hljs @{{ language }}">@{{ content }}</code>
+						<code class="hljs @{{ language }}">@{{ snippet.content }}</code>
 					</pre>
 				</p>
 			</a>
