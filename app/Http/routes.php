@@ -15,7 +15,6 @@ Route::get('auth/login', [
 ]);
 
 // Authentication routes...
-
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
@@ -23,7 +22,13 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+// Snippet
 Route::resource('snippet', 'SnippetController');
+
+// Api Snippet
+Route::resource('api/snippets', 'ApiSnippetController');
+
+
 
 // Default route
 Route::get('/', function () {

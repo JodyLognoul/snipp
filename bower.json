@@ -19,6 +19,9 @@
     "jquery": "~2.1.4",
     "vue": "~0.12.8",
     "algoliasearch": "3",
-    "typeahead.js": "~0.11.1"
+    "typeahead.js": "~0.11.1",
+    "sweetalert": "~1.1.0",
+    "vue-resource": "~0.1.13",
+    "bootstrap-sass": "~3.3.5"
   }
 }

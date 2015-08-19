@@ -1,4 +1,3 @@
-// snippet all
 .form-snippet-destroy {
 	display: inline;
 }
@@ -13,10 +12,14 @@
 		margin-right: 10px;
 	}
 }
-// snippet.index
 .snippet-index {
-	.search input {
+	.twitter-typeahead {
 		margin-top: 15px;
+		width: 100%;
+
+		.content {
+			width: 100%;
+		}
 	}
 	.search-result {
 		margin-top: 15px;
@@ -33,7 +36,6 @@
 		}
 	}
 }
-// snippet.show
 .snippet-show {
 	.snippet-content {
 		text-align: left;
