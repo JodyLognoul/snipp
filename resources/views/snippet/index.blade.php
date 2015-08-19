@@ -14,7 +14,8 @@
 		<input type="text" 
 			   v-model="query"
 			   v-on="keyup: search | key 'enter'"
-			   class="input-search-snippet form-control">
+			   class="input-search-snippet form-control"
+			   placeholder="Search for a snippet..">
 	</div>
 	<div class="search-result">
 		<div class="list-group" v-repeat="snippet: snippets">

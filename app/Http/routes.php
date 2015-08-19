@@ -26,7 +26,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::resource('snippet', 'SnippetController');
 
 // Api Snippet
-Route::resource('api/snippet', 'ApiSnippetController');
+Route::resource('api/snippets', 'ApiSnippetController');
 
 
 

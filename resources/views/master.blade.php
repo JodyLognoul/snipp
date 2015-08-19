@@ -5,8 +5,8 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     {{-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro|Dosis:300,500' rel='stylesheet' type='text/css'> --}}
 
-    <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/hljs/styles/{{ env('HL_STYLE') }}.css">
 </head>
 <body>

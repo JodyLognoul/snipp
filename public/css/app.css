@@ -5998,15 +5998,13 @@ body {
   margin: 0;
   padding: 50px 0;
   width: 100%;
-  display: table;
   font-weight: 100;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
   color: #34495e; }
 
 .container {
-  text-align: center;
-  display: table-cell; }
+  text-align: center; }
 
 .navbar-brand img {
   height: 100%; }
@@ -6032,6 +6030,8 @@ body {
 .snippet-index .twitter-typeahead {
   margin-top: 15px;
   width: 100%; }
+  .snippet-index .twitter-typeahead .content {
+    width: 100%; }
 
 .snippet-index .search-result {
   margin-top: 15px; }
