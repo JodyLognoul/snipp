@@ -9,7 +9,7 @@ var vm = new Vue({
 	},
 	ready: function(){
 		this.client = algoliasearch('G3M23URKQY', '68ac8fb94d2c2df3929d256d607afa36');
-		this.index = this.client.initIndex('dev_SNIPPET');
+		this.index = this.client.initIndex('SNIPPET_INDEX_DEV');
 		this.$input = $('.input-search-snippet');
 		this.loadTypeahead();
 		this.fetchSnippets();
