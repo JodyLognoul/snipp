@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Snippet;
 
-class algolia extends Command
+class Algolia extends Command
 {
     /**
      * The name and signature of the console command.
