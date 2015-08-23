@@ -8,8 +8,8 @@ var vm = new Vue({
 		snippets: [],
 	},
 	ready: function(){
-		this.client = algoliasearch('G3M23URKQY', '68ac8fb94d2c2df3929d256d607afa36');
-		this.index = this.client.initIndex('SNIPPET_INDEX_DEV');
+		this.client = algoliasearch(SNIPP.ALGOLIA_API_ID, SNIPP.ALGOLIA_API_KEY);
+		this.index = this.client.initIndex(SNIPP.ALOGOLIA_INDEX);
 		this.$input = $('.input-search-snippet');
 		this.loadTypeahead();
 		this.fetchSnippets();

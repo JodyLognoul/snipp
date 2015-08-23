@@ -21,6 +21,12 @@ class SnippetController extends Controller
      */
     public function index()
     {
+        \JavaScript::put([
+            'ALGOLIA_API_ID' => env('ALGOLIA_API_ID'),
+            'ALGOLIA_API_KEY' => env('ALGOLIA_API_KEY'),
+            'ALOGOLIA_INDEX' => env('ALOGOLIA_INDEX')
+        ]);
+
         $snippets = Snippet::all()->sortByDesc('created_at');
         return view('snippet.index', compact('snippets'));
     }

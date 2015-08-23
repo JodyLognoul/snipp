@@ -149,7 +149,7 @@ return [
          * Vendors
          */
         AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
-
+        Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
     ],
 
     /*
@@ -199,7 +199,6 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Illuminate\Html\FormFacade::class,
         'Html'      => Illuminate\Html\HtmlFacade::class,
-
     ],
 
 ];
