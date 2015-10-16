@@ -2,13 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use AlgoliaSearch\Laravel\AlgoliaEloquentTrait;
+use Illuminate\Database\Eloquent\Model;
 
 class Snippet extends Model
 {
     use AlgoliaEloquentTrait;
-    
+
     public $indices = [];
 
     protected $fillable = [
@@ -19,11 +19,12 @@ class Snippet extends Model
         'public',
         'language',
     ];
-    
+
     /**
      * Constructor
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->indices[] = env('ALOGOLIA_INDEX');
     }
 }
